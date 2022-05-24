@@ -1,0 +1,30 @@
+body {
+    margin: 2em;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.circle {
+    background-color: black;
+    border-radius: 50%;
+    width: 150px;
+    height: 190px;
+    margin: 2em;
+    flex: 0 0 23%;
+
+}
+.mole {
+    background-color: red;
+    animation: FadeIn 2s;
+}
+
+@keyframes FadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
