@@ -10,19 +10,16 @@ $(function () {
             $("h1").css("display","none");
             whackAMole();
         }
+
     });
-    let counter;
-    $(".mole").click(function (){
-        counter++;
-    })
-    console.log(counter);
+
 
     function whackAMole() {
        setInterval(function (){
-           let random = (Math.floor(Math.random() * (9) + 1)).toString();
+         let random = (Math.floor(Math.random() * (9) + 1)).toString();
            moles.each(function (){
                if (random === $(this).attr('id'))
-                   $(this).addClass("mole");
+                   $(this).first().addClass("mole");
                setTimeout(function () {
                    $('.mole').removeClass("mole");
                }, 1000);
@@ -30,9 +27,6 @@ $(function () {
        },2000);
 
    }
-
-
-
 
 
 
